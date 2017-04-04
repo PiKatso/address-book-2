@@ -29,7 +29,7 @@ function resetFields() {
 //Front-End Logic:
 $(document).ready(function() {
   $("#add-address").click(function() {
-    $("#new-addresses").append('<div class="new-address">' +
+    $("#new-addresses").append('<div class="new-address" id="optional-address">' +
                                  '<div class="form-group">' +
                                    '<label for="new-street">Street</label>' +
                                    '<input type="text" class="form-control new-street">' +
@@ -80,5 +80,6 @@ $(document).ready(function() {
       });
     });
     resetFields();
+    $("#optional-address").remove();
   });
 });
